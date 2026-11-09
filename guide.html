@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ms" data-lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cara Guna LiveHostea · Panduan langkah demi langkah</title>
+  <meta name="title-ms" content="Cara Guna LiveHostea · Panduan langkah demi langkah">
+  <meta name="title-en" content="How to use LiveHostea · Step-by-step guide">
+  <meta name="description" content="Step-by-step guide to installing and using LiveHostea: server, browser extension, earbud voice, OBS overlay, inventory, orders and analytics.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="nav light">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="LiveHostea home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M9 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg></span>
+      LiveHostea
+    </a>
+    <div class="nav-links">
+      <a href="index.html"><span data-l="ms">Laman utama</span><span data-l="en">Home</span></a>
+      <a href="#install"><span data-l="ms">Pasang</span><span data-l="en">Install</span></a>
+      <a href="#live"><span data-l="ms">Mula live</span><span data-l="en">Go live</span></a>
+      <a href="#troubleshooting"><span data-l="ms">Masalah biasa</span><span data-l="en">Troubleshooting</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-set-lang="ms">BM</button>
+        <button type="button" data-set-lang="en">EN</button>
+      </div>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="guide-hero">
+  <div class="container">
+    <span class="kicker" data-l="ms">Cara guna</span><span class="kicker" data-l="en">Guide</span>
+    <h1 data-l="ms">Panduan lengkap LiveHostea, langkah demi langkah.</h1>
+    <h1 data-l="en">The complete LiveHostea guide, step by step.</h1>
+    <p data-l="ms">Dari pemasangan pertama hingga live sebenar. Pemasangan ambil lebih kurang 15 minit, dan anda hanya perlu buat sekali.</p>
+    <p data-l="en">From first install to your real live. Setup takes about 15 minutes, and you only do it once.</p>
+  </div>
+</header>
+
+<div class="container guide-layout">
+  <aside class="toc" aria-label="Contents">
+    <h4 data-l="ms">Kandungan</h4><h4 data-l="en">Contents</h4>
+    <ol>
+      <li><a href="#overview"><span data-l="ms">1. Gambaran ringkas</span><span data-l="en">1. Overview</span></a></li>
+      <li><a href="#requirements"><span data-l="ms">2. Apa yang anda perlukan</span><span data-l="en">2. What you need</span></a></li>
+      <li><a href="#install"><span data-l="ms">3. Pasang LiveHostea</span><span data-l="en">3. Install LiveHostea</span></a></li>
+      <li><a href="#extension"><span data-l="ms">4. Pasang extension</span><span data-l="en">4. Install the extension</span></a></li>
+      <li><a href="#sandbox"><span data-l="ms">5. Berlatih dengan sandbox</span><span data-l="en">5. Practise in the sandbox</span></a></li>
+      <li><a href="#products"><span data-l="ms">6. Masukkan produk</span><span data-l="en">6. Add your products</span></a></li>
+      <li><a href="#voice"><span data-l="ms">7. Hidupkan suara earbud</span><span data-l="en">7. Turn on earbud voice</span></a></li>
+      <li><a href="#obs"><span data-l="ms">8. Sediakan overlay OBS</span><span data-l="en">8. Set up the OBS overlay</span></a></li>
+      <li><a href="#live"><span data-l="ms">9. Mula live</span><span data-l="en">9. Go live</span></a></li>
+      <li><a href="#during"><span data-l="ms">10. Semasa live</span><span data-l="en">10. During the live</span></a></li>
+      <li><a href="#buyers"><span data-l="ms">11. Apa pembeli patut taip</span><span data-l="en">11. What buyers should type</span></a></li>
+      <li><a href="#payment"><span data-l="ms">12. Kutip bayaran</span><span data-l="en">12. Collect payment</span></a></li>
+      <li><a href="#analytics"><span data-l="ms">13. Selepas live: analitik</span><span data-l="en">13. After the live: analytics</span></a></li>
+      <li><a href="#troubleshooting"><span data-l="ms">14. Masalah biasa</span><span data-l="en">14. Troubleshooting</span></a></li>
+      <li><a href="#advanced"><span data-l="ms">15. Lanjutan</span><span data-l="en">15. Advanced</span></a></li>
+    </ol>
+  </aside>
+
+  <main class="doc">
+
+    <!-- 1 -->
+    <section id="overview">
+      <h2><span class="num">1</span><span data-l="ms">Gambaran ringkas</span><span data-l="en">Overview</span></h2>
+      <p data-l="ms">LiveHostea ada tiga bahagian yang bekerjasama. Semuanya berjalan di komputer anda sendiri.</p>
+      <p data-l="en">LiveHostea has three parts that work together. All of them run on your own computer.</p>
+      <div class="parts">
+        <div class="part">🖥️<b data-l="ms">Server + dashboard</b><b data-l="en">Server + dashboard</b>
+          <span data-l="ms">"Otak" LiveHostea. Anda buka dashboard di Chrome untuk lihat permintaan, inventori, pesanan dan analitik.</span>
+          <span data-l="en">The "brain". You open the dashboard in Chrome to see requests, inventory, orders and analytics.</span></div>
+        <div class="part">🧩<b data-l="ms">Extension Chrome</b><b data-l="en">Chrome extension</b>
+          <span data-l="ms">Membaca chat live di halaman platform anda dan hantar ke server.</span>
+          <span data-l="en">Reads the live chat on your platform's page and sends it to the server.</span></div>
+        <div class="part">📺<b data-l="ms">Overlay OBS (pilihan)</b><b data-l="en">OBS overlay (optional)</b>
+          <span data-l="ms">Kad produk yang muncul di skrin live bila pembeli bertanya.</span>
+          <span data-l="en">Product cards that appear on your stream when buyers ask.</span></div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="requirements">
+      <h2><span class="num">2</span><span data-l="ms">Apa yang anda perlukan</span><span data-l="en">What you need</span></h2>
+      <ul class="plain">
+        <li data-l="ms"><b>Laptop atau PC</b> Windows 10/11 atau macOS. Anda boleh stream dari telefon, tapi chat perlu dibuka di komputer.</li>
+        <li data-l="en"><b>A laptop or PC</b> running Windows 10/11 or macOS. You can stream from your phone, but the chat has to be open on the computer.</li>
+        <li data-l="ms"><b>Google Chrome</b> (atau Edge / Brave).</li>
+        <li data-l="en"><b>Google Chrome</b> (or Edge / Brave).</li>
+        <li data-l="ms"><b>Aplikasi LiveHostea</b> untuk Windows atau Mac. Percuma; kita muat turun dalam langkah 3.</li>
+        <li data-l="en"><b>The LiveHostea app</b> for Windows or Mac. It's free; we download it in step 3.</li>
+        <li data-l="ms"><b>Earbud Bluetooth</b> (atau earphone berwayar) untuk dengar bisikan.</li>
+        <li data-l="en"><b>A Bluetooth earbud</b> (or wired earphones) to hear the whispers.</li>
+        <li data-l="ms"><b>OBS Studio</b> jika anda mahu overlay di skrin live. Pilihan.</li>
+        <li data-l="en"><b>OBS Studio</b> if you want on-screen overlays. Optional.</li>
+      </ul>
+    </section>
+
+    <!-- 3 -->
+    <section id="install">
+      <h2><span class="num">3</span><span data-l="ms">Pasang LiveHostea</span><span data-l="en">Install LiveHostea</span></h2>
+      <p data-l="ms">LiveHostea ialah aplikasi biasa. Muat turun, pasang dan buka; tiada terminal atau kod.</p>
+      <p data-l="en">LiveHostea is a normal app. Download, install and open it; no terminal or code.</p>
+      <div class="os-tabs" data-group="install" role="tablist">
+        <button type="button" data-os="win" role="tab">Windows</button>
+        <button type="button" data-os="mac" role="tab">macOS</button>
+      </div>
+
+      <div class="os-panel" data-group="install" data-os="win">
+        <p><a class="btn btn-primary btn-sm" href="https://github.com/LiveHostea/download/releases/latest/download/LiveHostea-Windows.exe">⬇ <span data-l="ms">Muat turun untuk Windows</span><span data-l="en">Download for Windows</span></a></p>
+        <ol class="steps-list">
+          <li data-l="ms">Buka fail <code>LiveHostea-Windows.exe</code> yang dimuat turun (biasanya dalam folder <b>Downloads</b>).</li>
+          <li data-l="en">Open the downloaded <code>LiveHostea-Windows.exe</code> (usually in your <b>Downloads</b> folder).</li>
+          <li data-l="ms">Jika keluar skrin biru <b>"Windows protected your PC"</b>, klik <b>More info</b>, kemudian <b>Run anyway</b>.</li>
+          <li data-l="en">If a blue <b>"Windows protected your PC"</b> screen appears, click <b>More info</b>, then <b>Run anyway</b>.</li>
+          <li data-l="ms">Ikut langkah pemasangan (klik <b>Next</b> / <b>Install</b>). Ikon LiveHostea akan ada di desktop dan Start menu.</li>
+          <li data-l="en">Follow the installer (click <b>Next</b> / <b>Install</b>). A LiveHostea icon is added to your desktop and Start menu.</li>
+        </ol>
+      </div>
+      <div class="os-panel" data-group="install" data-os="mac" hidden>
+        <p>
+          <a class="btn btn-primary btn-sm" href="https://github.com/LiveHostea/download/releases/latest/download/LiveHostea-Mac-arm64.dmg">⬇ <span data-l="ms">Mac (Apple Silicon M1–M4)</span><span data-l="en">Mac (Apple Silicon M1–M4)</span></a>
+          <a class="btn btn-outline btn-sm" href="https://github.com/LiveHostea/download/releases/latest/download/LiveHostea-Mac-x64.dmg">⬇ <span data-l="ms">Mac (Intel)</span><span data-l="en">Mac (Intel)</span></a>
+        </p>
+        <p data-l="ms" style="font-size:14px">Tak pasti? Klik logo Apple di penjuru kiri atas skrin → <b>About This Mac</b>. Jika tertulis <b>Chip Apple M…</b>, pilih Apple Silicon. Jika <b>Processor Intel</b>, pilih Intel.</p>
+        <p data-l="en" style="font-size:14px">Not sure? Click the Apple logo in the top-left corner of the screen → <b>About This Mac</b>. If it says <b>Chip Apple M…</b>, choose Apple Silicon. If it says <b>Processor Intel</b>, choose Intel.</p>
+        <ol class="steps-list">
+          <li data-l="ms">Buka fail <code>.dmg</code> yang dimuat turun dan <b>seret LiveHostea ke folder Applications</b>.</li>
+          <li data-l="en">Open the downloaded <code>.dmg</code> file and <b>drag LiveHostea into the Applications folder</b>.</li>
+          <li data-l="ms">Buka LiveHostea dari folder Applications.</li>
+          <li data-l="en">Open LiveHostea from the Applications folder.</li>
+          <li data-l="ms">Kali pertama, Mac mungkin kata <b>"Apple could not verify LiveHostea"</b>. Klik <b>Done</b>, kemudian buka <b>System Settings → Privacy &amp; Security</b>, skrol ke bawah dan klik <b>Open Anyway</b> di sebelah LiveHostea. Sahkan dengan kata laluan Mac anda.</li>
+          <li data-l="en">The first time, your Mac may say <b>"Apple could not verify LiveHostea"</b>. Click <b>Done</b>, then open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b> next to LiveHostea. Confirm with your Mac password.</li>
+        </ol>
+      </div>
+
+      <div class="callout info"><span class="ci">🛡️</span>
+        <p data-l="ms"><b>Kenapa ada amaran?</b> Windows dan Mac memaparkan amaran untuk aplikasi yang belum didaftarkan dengan sijil berbayar. LiveHostea selamat: setiap pemasang dibina secara automatik daripada kod kami oleh GitHub, dengan cara yang sama untuk setiap versi. Anda hanya perlu buat ini sekali.</p>
+        <p data-l="en"><b>Why the warning?</b> Windows and Mac warn about apps that aren't registered with a paid certificate yet. LiveHostea is safe: every installer is built automatically from our code by GitHub, the same way for every release. You only do this once.</p>
+      </div>
+
+      <p data-l="ms">Bila dibuka, dashboard LiveHostea terus muncul. Semua data (produk, pesanan, analitik) disimpan dalam komputer anda.</p>
+      <p data-l="en">When it opens, the LiveHostea dashboard appears straight away. All data (products, orders, analytics) is stored on your computer.</p>
+      <div class="callout tip"><span class="ci">💡</span>
+        <p data-l="ms">Nak tengok dashboard penuh dengan data dulu? Dalam aplikasi, klik menu <b>LiveHostea → Load demo data…</b>. Bila nak live betul-betul, klik <b>LiveHostea → Start fresh</b> untuk kosongkan semula.</p>
+        <p data-l="en">Want to see the dashboard full of data first? In the app, click <b>LiveHostea → Load demo data…</b>. When you're ready for your real live, click <b>LiveHostea → Start fresh</b> to clear it.</p>
+      </div>
+      <h3 data-l="ms">Setiap kali nak live selepas ini</h3><h3 data-l="en">Every time you go live after this</h3>
+      <p data-l="ms">Buka aplikasi LiveHostea dari desktop, Start menu atau folder Applications. Itu sahaja. Bila versi baharu keluar, aplikasi akan beritahu anda.</p>
+      <p data-l="en">Open the LiveHostea app from your desktop, Start menu or Applications folder. That's it. When a new version comes out, the app tells you.</p>
+
+      <details class="advanced">
+        <summary><span data-l="ms">Lanjutan: jalankan dari kod sumber (Node.js)</span><span data-l="en">Advanced: run from source code (Node.js)</span></summary>
+        <p data-l="ms">Untuk pembangun yang mempunyai akses kepada kod sumber LiveHostea. Anda tidak perlu ini jika menggunakan aplikasi di atas.</p>
+        <p data-l="en">For developers with access to the LiveHostea source code. You don't need this if you use the app above.</p>
+        <div class="os-tabs" data-group="source" role="tablist">
+          <button type="button" data-os="win" role="tab">Windows</button>
+          <button type="button" data-os="mac" role="tab">macOS / Linux</button>
+        </div>
+      <h3 data-l="ms">a. Pasang Node.js</h3><h3 data-l="en">a. Install Node.js</h3>
+      <p data-l="ms">Pergi ke <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>, muat turun versi <b>LTS</b>, dan pasang dengan tetapan asal (tekan Next sehingga selesai).</p>
+      <p data-l="en">Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>, download the <b>LTS</b> version and install it with the default settings (keep clicking Next).</p>
+
+      <h3 data-l="ms">b. Muat turun LiveHostea</h3><h3 data-l="en">b. Download LiveHostea</h3>
+      <p data-l="ms">Muat turun fail ZIP ini dan <b>extract</b> ke folder yang mudah dicari, contohnya <code>Documents\LiveHostea</code>.</p>
+      <p data-l="en">Download this ZIP file and <b>extract</b> it somewhere easy to find, for example <code>Documents/LiveHostea</code>.</p>
+      <p><a class="btn btn-outline btn-sm" href="https://github.com/LiveHostea/LiveHostea/archive/refs/heads/main.zip">⬇ <span data-l="ms">Muat turun ZIP</span><span data-l="en">Download ZIP</span></a></p>
+
+      <h3 data-l="ms">c. Buka terminal dalam folder itu</h3><h3 data-l="en">c. Open a terminal in that folder</h3>
+      <div class="os-panel" data-group="source" data-os="win">
+        <p data-l="ms">Buka folder LiveHostea dalam File Explorer. Klik pada bar alamat di atas, taip <code>cmd</code> dan tekan <kbd>Enter</kbd>. Tetingkap hitam (Command Prompt) akan terbuka dalam folder itu.</p>
+        <p data-l="en">Open the LiveHostea folder in File Explorer. Click the address bar at the top, type <code>cmd</code> and press <kbd>Enter</kbd>. A black window (Command Prompt) opens in that folder.</p>
+      </div>
+      <div class="os-panel" data-group="source" data-os="mac" hidden>
+        <p data-l="ms">Buka aplikasi <b>Terminal</b>. Taip <code>cd</code> diikuti satu jarak, kemudian seret folder LiveHostea ke dalam tetingkap Terminal dan tekan <kbd>Enter</kbd>.</p>
+        <p data-l="en">Open the <b>Terminal</b> app. Type <code>cd</code> followed by a space, drag the LiveHostea folder into the Terminal window and press <kbd>Enter</kbd>.</p>
+      </div>
+
+      <h3 data-l="ms">d. Pasang dan mulakan</h3><h3 data-l="en">d. Install and start</h3>
+      <p data-l="ms">Taip arahan ini satu demi satu. Arahan pertama hanya perlu sekali sahaja.</p>
+      <p data-l="en">Type these commands one at a time. The first one is only needed once.</p>
+      <pre class="cmd"><code>npm install</code></pre>
+      <pre class="cmd"><code>npm start</code></pre>
+      <p data-l="ms">Bila nampak <code>🚀 LiveHostea Server running on http://localhost:3000</code>, buka <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> di Chrome. Itulah dashboard anda.</p>
+      <p data-l="en">When you see <code>🚀 LiveHostea Server running on http://localhost:3000</code>, open <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a> in Chrome. That's your dashboard.</p>
+      <div class="callout warn"><span class="ci">⚠️</span>
+        <p data-l="ms"><b>Jangan tutup tetingkap terminal</b> semasa live. Itulah yang menjalankan LiveHostea. Untuk berhenti, tekan <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+        <p data-l="en"><b>Don't close the terminal window</b> while you're live; it's what runs LiveHostea. To stop it, press <kbd>Ctrl</kbd> + <kbd>C</kbd>.</p>
+      </div>
+      <div class="callout tip"><span class="ci">💡</span>
+        <p data-l="ms">Nak tengok dashboard penuh dengan data dulu? Jalankan <code>npm run demo</code> sebelum <code>npm start</code> untuk masukkan contoh sesi live selama sejam. Bila nak guna betul-betul, jalankan <code>npm run setup</code> untuk kosongkan semula.</p>
+        <p data-l="en">Want to see the dashboard full of data first? Run <code>npm run demo</code> before <code>npm start</code> to load a sample one-hour live session. When you're ready for real use, run <code>npm run setup</code> to reset it.</p>
+      </div>
+      <h3 data-l="ms">Setiap kali nak live selepas ini</h3><h3 data-l="en">Every time you go live after this</h3>
+      <p data-l="ms">Buka terminal dalam folder LiveHostea (langkah c) dan taip <code>npm start</code>. Itu sahaja.</p>
+      <p data-l="en">Open a terminal in the LiveHostea folder (step c) and type <code>npm start</code>. That's it.</p>
+      </details>
+    </section>
+
+    <!-- 4 -->
+    <section id="extension">
+      <h2><span class="num">4</span><span data-l="ms">Pasang extension Chrome</span><span data-l="en">Install the Chrome extension</span></h2>
+      <p data-l="ms">Extension membaca chat live di Chrome dan menghantarnya ke aplikasi LiveHostea. Dalam aplikasi, klik menu <b>Help → Install Chrome extension…</b>.</p>
+      <p data-l="en">The extension reads the live chat in Chrome and sends it to the LiveHostea app. In the app, click <b>Help → Install Chrome extension…</b>.</p>
+      <ul class="plain">
+        <li data-l="ms"><b>Jika extension sudah ada di Chrome Web Store</b>, halaman itu akan dibuka. Klik <b>Add to Chrome</b>. Siap!</li>
+        <li data-l="en"><b>If the extension is on the Chrome Web Store</b>, that page opens. Click <b>Add to Chrome</b>. Done!</li>
+        <li data-l="ms"><b>Jika belum</b>, aplikasi menunjukkan folder extension. Ikut langkah ini sekali sahaja:</li>
+        <li data-l="en"><b>If not yet</b>, the app shows you the extension folder. Follow these steps once:</li>
+      </ul>
+      <ol class="steps-list">
+        <li data-l="ms">Di Chrome, taip <code>chrome://extensions</code> pada bar alamat dan tekan <kbd>Enter</kbd>.</li>
+        <li data-l="en">In Chrome, type <code>chrome://extensions</code> in the address bar and press <kbd>Enter</kbd>.</li>
+        <li data-l="ms">Hidupkan <b>Developer mode</b> (suis di penjuru kanan atas).</li>
+        <li data-l="en">Turn on <b>Developer mode</b> (the switch in the top-right corner).</li>
+        <li data-l="ms">Klik <b>Load unpacked</b> dan pilih folder yang ditunjukkan oleh aplikasi (klik <b>Show folder</b>).</li>
+        <li data-l="en">Click <b>Load unpacked</b> and choose the folder the app shows you (click <b>Show folder</b>).</li>
+        <li data-l="ms">Klik ikon kepingan puzzle 🧩 di Chrome dan <b>pin</b> LiveHostea supaya ikonnya sentiasa kelihatan.</li>
+        <li data-l="en">Click the puzzle-piece icon 🧩 in Chrome and <b>pin</b> LiveHostea so its icon is always visible.</li>
+      </ol>
+      <div class="shot" style="max-width:320px"><img src="assets/img/popup.webp" width="320" height="380" alt="LiveHostea extension popup showing Connected, chat source tiktok and comments forwarded" loading="lazy"></div>
+      <p data-l="ms">Klik ikon LiveHostea pada mana-mana halaman chat untuk lihat status. <b>Connected</b> bermaksud semuanya berfungsi.</p>
+      <p data-l="en">Click the LiveHostea icon on any chat page to see its status. <b>Connected</b> means everything is working.</p>
+    </section>
+
+    <!-- 5 -->
+    <section id="sandbox">
+      <h2><span class="num">5</span><span data-l="ms">Berlatih dengan sandbox</span><span data-l="en">Practise in the sandbox</span></h2>
+      <p data-l="ms">Sandbox ialah "live palsu" untuk anda cuba LiveHostea tanpa penonton sebenar. Buka <a href="http://localhost:3000/test" target="_blank" rel="noopener">http://localhost:3000/test</a> dalam tab baharu, dan letak dashboard di sebelah.</p>
+      <p data-l="en">The sandbox is a "fake live" for trying LiveHostea without real viewers. Open <a href="http://localhost:3000/test" target="_blank" rel="noopener">http://localhost:3000/test</a> in a new tab and put the dashboard next to it.</p>
+      <div class="shot"><img src="assets/img/sandbox.webp" width="1200" height="760" alt="Sandbox page with fake chat messages and buttons for lock requests, complaints, spam and a chat storm" loading="lazy"></div>
+      <ul class="plain">
+        <li data-l="ms">Klik <b>🔒 Lock request</b>, <b>⚠️ Complaint</b> atau <b>🌪️ Chat storm</b> dan lihat dashboard mengisih mesej.</li>
+        <li data-l="en">Click <b>🔒 Lock request</b>, <b>⚠️ Complaint</b> or <b>🌪️ Chat storm</b> and watch the dashboard sort the messages.</li>
+        <li data-l="ms">Taip mesej sendiri dalam kotak di bawah, contohnya <code>nak lock 3</code>.</li>
+        <li data-l="en">Type your own message in the box at the bottom, for example <code>nak lock 3</code>.</li>
+        <li data-l="ms">Belum pasang extension? Tandakan <b>Send directly (no extension)</b>.</li>
+        <li data-l="en">Haven't installed the extension yet? Tick <b>Send directly (no extension)</b>.</li>
+      </ul>
+    </section>
+
+    <!-- 6 -->
+    <section id="products">
+      <h2><span class="num">6</span><span data-l="ms">Masukkan produk anda</span><span data-l="en">Add your products</span></h2>
+      <p data-l="ms">Di dashboard, buka tab <b>Inventory</b>. Isi nama, harga dan stok, kemudian klik <b>Add product</b>. Untuk ubah, klik terus pada mana-mana sel; ia disimpan automatik.</p>
+      <p data-l="en">In the dashboard, open the <b>Inventory</b> tab. Fill in the name, price and stock, then click <b>Add product</b>. To edit, click any cell; changes save automatically.</p>
+      <div class="shot"><img src="assets/img/inventory.webp" width="1440" height="700" alt="Inventory tab with a form to add products and an editable product table" loading="lazy"></div>
+      <div class="callout info"><span class="ci">🔢</span>
+        <p data-l="ms"><b>Nombor item (#) ialah apa yang pembeli taip.</b> Kalau Kurung Moden ialah item 3, pembeli taip "lock 3". Sebut nombor item dengan jelas semasa live, atau letak label nombor pada setiap produk.</p>
+        <p data-l="en"><b>The item number (#) is what buyers type.</b> If Kurung Moden is item 3, buyers type "lock 3". Say the item number clearly during your live, or put a number label on each product.</p>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section id="voice">
+      <h2><span class="num">7</span><span data-l="ms">Hidupkan suara earbud</span><span data-l="en">Turn on earbud voice</span></h2>
+      <ol class="steps-list">
+        <li data-l="ms">Sambungkan earbud ke komputer, dan pastikan ia dipilih sebagai <b>output bunyi</b> (Windows: ikon speaker di taskbar; Mac: menu Bunyi).</li>
+        <li data-l="en">Connect your earbud to the computer and make sure it's selected as the <b>sound output</b> (Windows: the speaker icon in the taskbar; Mac: the Sound menu).</li>
+        <li data-l="ms">Di dashboard, klik butang <b>Earbud voice off</b> di atas. Ia bertukar kepada <b>Earbud voice on</b> dan anda akan dengar "LiveHostea voice ready".</li>
+        <li data-l="en">In the dashboard, click the <b>Earbud voice off</b> button at the top. It changes to <b>Earbud voice on</b> and you'll hear "LiveHostea voice ready".</li>
+        <li data-l="ms">Klik ikon ⚙️ di sebelahnya untuk ubah tetapan:</li>
+        <li data-l="en">Click the ⚙️ icon next to it to change the settings:</li>
+      </ol>
+      <div class="table-wrap"><table>
+        <thead><tr><th data-l="ms">Tetapan</th><th data-l="en">Setting</th><th data-l="ms">Cadangan</th><th data-l="en">Suggestion</th></tr></thead>
+        <tbody>
+          <tr><td><b>Speed</b></td><td data-l="ms">1.2x untuk mula. Naikkan ke 1.4x bila dah biasa.</td><td data-l="en">Start at 1.2x. Go up to 1.4x once you're used to it.</td></tr>
+          <tr><td><b>Read out</b></td><td data-l="ms">"Product requests &amp; complaints". Untuk live yang sangat sibuk, pilih "Only locks &amp; complaints".</td><td data-l="en">"Product requests &amp; complaints". For very busy lives, choose "Only locks &amp; complaints".</td></tr>
+          <tr><td><b>Voice</b></td><td data-l="ms">Pilih suara yang paling jelas untuk anda. Suara Bahasa Melayu bergantung pada komputer anda.</td><td data-l="en">Pick the voice that's clearest to you. Malay voices depend on your computer.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout tip"><span class="ci">💡</span>
+        <p data-l="ms">Pelayar perlukan satu klik sebelum boleh main bunyi. Kalau anda refresh dashboard, klik butang suara sekali lagi.</p>
+        <p data-l="en">Browsers need one click before they can play sound. If you refresh the dashboard, click the voice button again.</p>
+      </div>
+    </section>
+
+    <!-- 8 -->
+    <section id="obs">
+      <h2><span class="num">8</span><span data-l="ms">Sediakan overlay OBS (pilihan)</span><span data-l="en">Set up the OBS overlay (optional)</span></h2>
+      <ol class="steps-list">
+        <li data-l="ms">Dalam OBS, di kotak <b>Sources</b>, klik <b>+</b> dan pilih <b>Browser</b>.</li>
+        <li data-l="en">In OBS, in the <b>Sources</b> box, click <b>+</b> and choose <b>Browser</b>.</li>
+        <li data-l="ms">Isi <b>URL</b>: <code>http://localhost:3000/overlay</code>, <b>Width</b>: 1920, <b>Height</b>: 1080. Klik OK. (Dalam aplikasi, menu <b>LiveHostea → Copy OBS overlay URL</b> menyalin URL yang betul untuk anda.)</li>
+        <li data-l="en">Set <b>URL</b> to <code>http://localhost:3000/overlay</code>, <b>Width</b> to 1920 and <b>Height</b> to 1080. Click OK. (In the app, <b>LiveHostea → Copy OBS overlay URL</b> copies the right URL for you.)</li>
+        <li data-l="ms">Overlay lutsinar, jadi tiada apa kelihatan sehingga pembeli bertanya tentang produk.</li>
+        <li data-l="en">The overlay is transparent, so nothing shows until a buyer asks about a product.</li>
+      </ol>
+      <div class="shot dark"><img src="assets/img/overlay.webp" width="1280" height="720" alt="Overlay card on stream" loading="lazy"></div>
+      <h3 data-l="ms">Ubah rupa overlay</h3>
+      <h3 data-l="en">Style the overlay</h3>
+      <p data-l="ms">Buka tab <b>Overlay</b> dalam dashboard. Pilih tema, sudut skrin, warna, tempoh paparan dan sama ada baki stok ditunjukkan. Pratonton berubah serta-merta. Klik <b>Save</b> dan overlay dalam OBS bertukar rupa terus, tanpa perlu tampal URL semula. Klik <b>Show test card in OBS</b> untuk memastikan OBS bersambung.</p>
+      <p data-l="en">Open the <b>Overlay</b> tab in the dashboard. Choose the theme, screen corner, colour, how long the card stays and whether stock left is shown. The preview changes as you go. Click <b>Save</b> and the overlay in OBS restyles straight away, with no URL to paste again. Click <b>Show test card in OBS</b> to check OBS is connected.</p>
+      <details class="advanced">
+        <summary><span data-l="ms">Lanjutan: pilihan pada URL</span><span data-l="en">Advanced: URL options</span></summary>
+        <p data-l="ms">Pilihan pada URL mengatasi gaya yang disimpan, berguna jika anda mahu dua overlay berbeza. Contoh:</p>
+        <p data-l="en">URL options override the saved style, handy if you want two different overlays. For example:</p>
+        <pre class="cmd"><code>http://localhost:3000/overlay?theme=dark&amp;position=bottom-right&amp;duration=8</code></pre>
+        <div class="table-wrap"><table>
+          <thead><tr><th data-l="ms">Pilihan</th><th data-l="en">Option</th><th data-l="ms">Nilai</th><th data-l="en">Values</th></tr></thead>
+          <tbody>
+            <tr><td><code>theme</code></td><td><code>glass</code>, <code>dark</code>, <code>minimal</code></td></tr>
+            <tr><td><code>position</code></td><td><code>bottom-left</code>, <code>bottom-right</code>, <code>top-left</code>, <code>top-right</code></td></tr>
+            <tr><td><code>duration</code></td><td data-l="ms">Saat kad dipaparkan (2–60)</td><td data-l="en">Seconds the card stays on screen (2–60)</td></tr>
+            <tr><td><code>accent</code></td><td data-l="ms">Warna jenama tanpa <code>#</code>, contohnya <code>ff4d6d</code></td><td data-l="en">Brand colour without <code>#</code>, e.g. <code>ff4d6d</code></td></tr>
+            <tr><td><code>stock=0</code></td><td data-l="ms">Sembunyikan baki stok</td><td data-l="en">Hide stock left</td></tr>
+            <tr><td><code>demo=1</code></td><td data-l="ms">Tunjuk kad contoh supaya anda boleh susun kedudukannya</td><td data-l="en">Show a sample card so you can position it</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+    </section>
+
+    <!-- 9 -->
+    <section id="live">
+      <h2><span class="num">9</span><span data-l="ms">Mula live</span><span data-l="en">Go live</span></h2>
+      <ol class="steps-list">
+        <li data-l="ms">Buka aplikasi LiveHostea.</li>
+        <li data-l="en">Open the LiveHostea app.</li>
+        <li data-l="ms">Mula live anda seperti biasa (dari telefon, OBS atau aplikasi platform).</li>
+        <li data-l="en">Start your live as usual (from your phone, OBS or the platform's app).</li>
+        <li data-l="ms">Di Chrome pada komputer, buka <b>halaman live anda yang menunjukkan chat</b>, contohnya halaman live di laman web TikTok, YouTube Studio, atau dashboard live penjual Shopee.</li>
+        <li data-l="en">In Chrome on the computer, open <b>your live page that shows the chat</b>, for example your live on the TikTok website, YouTube Studio, or the Shopee seller live dashboard.</li>
+        <li data-l="ms">Klik ikon LiveHostea. Pastikan status <b>Connected</b> dan <b>Chat source</b> menunjukkan nama platform.</li>
+        <li data-l="en">Click the LiveHostea icon. Check that the status says <b>Connected</b> and <b>Chat source</b> shows the platform name.</li>
+        <li data-l="ms">Hidupkan suara earbud di dashboard. Anda dah sedia!</li>
+        <li data-l="en">Turn on earbud voice in the dashboard. You're ready!</li>
+      </ol>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Platform</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>YouTube Live</td><td data-l="ms">✅ Disokong terus (buka chat live atau "pop-out chat")</td><td data-l="en">✅ Supported (open the live chat or the "pop-out chat")</td></tr>
+          <tr><td>Twitch</td><td data-l="ms">✅ Disokong terus</td><td data-l="en">✅ Supported</td></tr>
+          <tr><td>TikTok Live, Shopee Live</td><td data-l="ms">⚠️ Percubaan. Jika chat tidak dikesan, guna "custom selectors" di bawah.</td><td data-l="en">⚠️ Best effort. If chat isn't detected, use "custom selectors" below.</td></tr>
+          <tr><td data-l="ms">Lain-lain</td><td data-l="en">Others</td><td data-l="ms">🔧 Guna "custom selectors"</td><td data-l="en">🔧 Use "custom selectors"</td></tr>
+        </tbody>
+      </table></div>
+      <h3 data-l="ms">Jika extension kata "No Chat Found"</h3><h3 data-l="en">If the extension says "No Chat Found"</h3>
+      <ol class="steps-list">
+        <li data-l="ms">Klik kanan pada satu komen dalam chat, pilih <b>Inspect</b>.</li>
+        <li data-l="en">Right-click one comment in the chat and choose <b>Inspect</b>.</li>
+        <li data-l="ms">Cari elemen yang membungkus satu komen penuh (nama + mesej). Salin nama <code>class</code>nya, contohnya <code>comment-item</code>.</li>
+        <li data-l="en">Find the element that wraps one whole comment (name + message). Copy its <code>class</code> name, e.g. <code>comment-item</code>.</li>
+        <li data-l="ms">Buka popup LiveHostea → <b>Custom selectors for this site</b>. Isi <b>One chat message</b> dengan <code>.comment-item</code> (titik di depan). Isi nama pengguna dan teks jika anda tahu. Klik <b>Save settings</b>.</li>
+        <li data-l="en">Open the LiveHostea popup → <b>Custom selectors for this site</b>. Fill <b>One chat message</b> with <code>.comment-item</code> (with a dot in front). Fill in username and text if you know them. Click <b>Save settings</b>.</li>
+      </ol>
+    </section>
+
+    <!-- 10 -->
+    <section id="during">
+      <h2><span class="num">10</span><span data-l="ms">Semasa live</span><span data-l="en">During the live</span></h2>
+      <div class="shot"><img src="assets/img/dashboard.webp" width="1440" height="900" alt="Live feed with lock, show, stock, price and complaint cards" loading="lazy"></div>
+      <ul class="plain">
+        <li data-l="ms"><b>Live Feed</b> menunjukkan permintaan terbaru di atas. Kad dengan jalur merah ialah keutamaan tinggi (lock dan aduan).</li>
+        <li data-l="en"><b>Live Feed</b> shows the newest requests on top. Cards with a red stripe are high priority (locks and complaints).</li>
+        <li data-l="ms"><b>Klik kad</b> untuk tandakan sudah dilayan. Ini juga mengira masa respons anda dalam analitik.</li>
+        <li data-l="en"><b>Click a card</b> to mark it handled. This also measures your response time in analytics.</li>
+        <li data-l="ms">Guna penapis <b>Unhandled</b> untuk lihat yang belum dilayan, atau <b>Critical</b> untuk lock dan aduan sahaja.</li>
+        <li data-l="en">Use the <b>Unhandled</b> filter to see what's left, or <b>Critical</b> for locks and complaints only.</li>
+        <li data-l="ms">Bila pembeli lock, stok terus ditolak. Bila habis, kad menunjukkan <b>Sold out</b> dan earbud akan beritahu anda.</li>
+        <li data-l="en">When a buyer locks, stock is reserved immediately. When it runs out, the card shows <b>Sold out</b> and your earbud tells you.</li>
+        <li data-l="ms">Di tab <b>Orders</b>, klik <b>Confirm paid</b> bila pembeli dah bayar, atau <b>Cancel</b> untuk pulangkan stok.</li>
+        <li data-l="en">In the <b>Orders</b> tab, click <b>Confirm paid</b> once a buyer has paid, or <b>Cancel</b> to return the stock.</li>
+      </ul>
+      <div class="callout tip"><span class="ci">💡</span>
+        <p data-l="ms">Pembeli yang ulang "lock 3" beberapa kali dalam 30 saat hanya dikira sekali, jadi stok tak hilang sia-sia.</p>
+        <p data-l="en">A buyer who repeats "lock 3" several times within 30 seconds only counts once, so stock isn't wasted.</p>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section id="buyers">
+      <h2><span class="num">11</span><span data-l="ms">Apa pembeli patut taip</span><span data-l="en">What buyers should type</span></h2>
+      <p data-l="ms">LiveHostea faham pelbagai cara pembeli menaip dalam BM dan English. Beritahu penonton di awal live: <i>"Nak beli, taip lock dan nombor item ya!"</i></p>
+      <p data-l="en">LiveHostea understands many ways buyers type, in Malay and English. Tell viewers at the start: <i>"To buy, type lock and the item number!"</i></p>
+      <div class="table-wrap"><table>
+        <thead><tr><th data-l="ms">Jenis</th><th data-l="en">Type</th><th data-l="ms">Contoh yang difahami</th><th data-l="en">Understood examples</th><th data-l="ms">Apa berlaku</th><th data-l="en">What happens</th></tr></thead>
+        <tbody>
+          <tr><td>🔒 Lock</td><td><code>lock 2</code>, <code>nak 3</code>, <code>beli item 4</code>, <code>cop 5!</code>, <code>saya ambil item 1</code></td><td data-l="ms">Stok dikunci, pesanan dicipta, earbud beritahu baki stok</td><td data-l="en">Stock reserved, order created, earbud tells you stock left</td></tr>
+          <tr><td>👀 Show</td><td><code>item 1</code>, <code>nak tengok 4</code>, <code>#5</code>, <code>5</code></td><td data-l="ms">Kad produk muncul di overlay</td><td data-l="en">Product card appears on the overlay</td></tr>
+          <tr><td>📦 <span data-l="ms">Stok</span><span data-l="en">Stock</span></td><td><code>item 3 ada stok lagi?</code>, <code>ada saiz M?</code></td><td data-l="ms">Dibacakan dengan baki stok</td><td data-l="en">Read out, with stock left shown</td></tr>
+          <tr><td>🏷️ <span data-l="ms">Harga</span><span data-l="en">Price</span></td><td><code>harga item 2 berapa</code>, <code>how much no 5</code></td><td data-l="ms">Dibacakan; harga dipaparkan</td><td data-l="en">Read out; price shown</td></tr>
+          <tr><td>⚠️ <span data-l="ms">Aduan</span><span data-l="en">Complaint</span></td><td><code>barang tak sampai</code>, <code>nak refund</code>, <code>rosak</code></td><td data-l="ms">Keutamaan tertinggi, ditanda merah</td><td data-l="en">Highest priority, marked red</td></tr>
+          <tr><td>🚫 Spam</td><td data-l="ms">Link, "f4f", emoji sahaja, "cantikkkkkkk"</td><td data-l="en">Links, "f4f", emoji only, "cantikkkkkkk"</td><td data-l="ms">Ditapis, tidak dipaparkan</td><td data-l="en">Filtered, not shown</td></tr>
+        </tbody>
+      </table></div>
+      <p data-l="ms">Jumlah wang (<code>rm 25</code>) dan nombor dalam ayat panjang (<code>postage 2 hari</code>) tidak disalah anggap sebagai nombor item.</p>
+      <p data-l="en">Money amounts (<code>rm 25</code>) and numbers inside long sentences (<code>postage 2 hari</code>) aren't mistaken for item numbers.</p>
+    </section>
+
+    <!-- 12 -->
+    <section id="payment">
+      <h2><span class="num">12</span><span data-l="ms">Kutip bayaran</span><span data-l="en">Collect payment</span></h2>
+      <p data-l="ms">Sekali sahaja: dalam tab <b>Settings</b>, isi <b>Checkout message</b>: nama kedai, cara bayaran (akaun bank, DuitNow) dan nombor WhatsApp anda. Pratonton menunjukkan mesej yang pembeli akan terima.</p>
+      <p data-l="en">Once: in the <b>Settings</b> tab, fill in <b>Checkout message</b>: shop name, how to pay (bank account, DuitNow) and your WhatsApp number. The preview shows the message buyers will get.</p>
+      <ol class="steps-list">
+        <li data-l="ms">Buka tab <b>Orders</b> dan pilih <b>By buyer</b>. Setiap pembeli ada satu kad dengan semua item dan jumlah harga.</li>
+        <li data-l="en">Open the <b>Orders</b> tab and choose <b>By buyer</b>. Each buyer has one card with all their items and the total.</li>
+        <li data-l="ms">Klik <b>WhatsApp</b> untuk membuka WhatsApp dengan mesej bayaran sudah ditulis, kemudian pilih chat pembeli. Atau klik <b>Copy message</b> dan tampal di mana-mana.</li>
+        <li data-l="en">Click <b>WhatsApp</b> to open WhatsApp with the payment message already written, then pick the buyer's chat. Or click <b>Copy message</b> and paste it anywhere.</li>
+        <li data-l="ms">Ada nombor pembeli? Klik <b>📱 Add number</b> sekali. Selepas itu butang WhatsApp terus membuka chat mereka.</li>
+        <li data-l="en">Have the buyer's number? Click <b>📱 Add number</b> once. After that the WhatsApp button opens their chat directly.</li>
+        <li data-l="ms">Bila bayaran masuk, klik <b>Confirm all paid</b>. <b>Receipt</b> membuka resit yang boleh dicetak atau disimpan sebagai PDF.</li>
+        <li data-l="en">When the payment arrives, click <b>Confirm all paid</b>. <b>Receipt</b> opens a receipt you can print or save as PDF.</li>
+      </ol>
+      <p data-l="ms"><b>Export CSV</b> memuat turun semua pesanan untuk Excel, Google Sheets atau akauntan anda.</p>
+      <p data-l="en"><b>Export CSV</b> downloads every order for Excel, Google Sheets or your accountant.</p>
+    </section>
+
+    <!-- 13 -->
+    <section id="analytics">
+      <h2><span class="num">13</span><span data-l="ms">Selepas live: analitik</span><span data-l="en">After the live: analytics</span></h2>
+      <p data-l="ms">Buka tab <b>Analytics</b> dan pilih tempoh masa (15 minit hingga 7 hari).</p>
+      <p data-l="en">Open the <b>Analytics</b> tab and choose a time range (15 minutes to 7 days).</p>
+      <div class="shot"><img src="assets/img/analytics.webp" width="1440" height="1060" alt="Analytics tab" loading="lazy"></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th data-l="ms">Bahagian</th><th data-l="en">Section</th><th data-l="ms">Apa maksudnya</th><th data-l="en">What it tells you</th></tr></thead>
+        <tbody>
+          <tr><td><b>Buyer intents</b></td><td data-l="ms">Berapa banyak permintaan sebenar daripada semua chat yang dibaca.</td><td data-l="en">How many real requests came out of all the chat read.</td></tr>
+          <tr><td><b>Lock → paid</b></td><td data-l="ms">Peratus lock yang anda sahkan dibayar. Rendah? Ingatkan pembeli bayar sebelum live tamat.</td><td data-l="en">Share of locks you confirmed as paid. Low? Remind buyers to pay before the live ends.</td></tr>
+          <tr><td><b>Median response time</b></td><td data-l="ms">Masa biasa dari pembeli bertanya hingga anda klik kad. Lebih cepat, lebih banyak jualan.</td><td data-l="en">Typical time from a buyer asking to you clicking the card. Faster usually means more sales.</td></tr>
+          <tr><td><b>Buyer intents over time</b></td><td data-l="ms">Bila pembeli paling aktif. Ulang apa yang anda buat pada masa puncak.</td><td data-l="en">When buyers were most active. Repeat what you did at the peak.</td></tr>
+          <tr><td><b>Most requested products</b></td><td data-l="ms">Produk paling diminta. Jika ada "missed (sold out)", sediakan lebih stok lain kali.</td><td data-l="en">Your most requested products. If some show "missed (sold out)", bring more stock next time.</td></tr>
+        </tbody>
+      </table></div>
+      <p data-l="ms">Klik <b>Export CSV</b> untuk muat turun semua permintaan ke Excel atau Google Sheets.</p>
+      <p data-l="en">Click <b>Export CSV</b> to download every request for Excel or Google Sheets.</p>
+    </section>
+
+    <!-- 14 -->
+    <section id="troubleshooting">
+      <h2><span class="num">14</span><span data-l="ms">Masalah biasa</span><span data-l="en">Troubleshooting</span></h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th data-l="ms">Masalah</th><th data-l="en">Problem</th><th data-l="ms">Penyelesaian</th><th data-l="en">Fix</th></tr></thead>
+        <tbody>
+          <tr><td data-l="ms">Windows: <b>"Windows protected your PC"</b></td><td data-l="en">Windows: <b>"Windows protected your PC"</b></td><td data-l="ms">Klik <b>More info</b> → <b>Run anyway</b>. Ini kerana aplikasi belum disijilkan; ia hanya muncul semasa pemasangan.</td><td data-l="en">Click <b>More info</b> → <b>Run anyway</b>. The app isn't certificate-signed yet; this only appears when installing.</td></tr>
+          <tr><td data-l="ms">Mac: <b>"Apple could not verify"</b> atau <b>"damaged"</b></td><td data-l="en">Mac: <b>"Apple could not verify"</b> or <b>"damaged"</b></td><td data-l="ms"><b>System Settings → Privacy &amp; Security → Open Anyway</b>. Jika masih kata "damaged", buka aplikasi Terminal dan jalankan arahan di bawah sekali, kemudian buka LiveHostea semula.</td><td data-l="en"><b>System Settings → Privacy &amp; Security → Open Anyway</b>. If it still says "damaged", open the Terminal app, run the command below once, then open LiveHostea again.</td></tr>
+          <tr><td data-l="ms">Popup kata <b>Not Loaded</b></td><td data-l="en">Popup says <b>Not Loaded</b></td><td data-l="ms">Refresh halaman chat (atau klik <b>Re-hook Current Tab</b>). Extension hanya aktif pada tab yang dibuka selepas ia dipasang.</td><td data-l="en">Refresh the chat page (or click <b>Re-hook Current Tab</b>). The extension only runs on tabs opened after it was installed.</td></tr>
+          <tr><td data-l="ms">Popup kata <b>Server Unreachable</b></td><td data-l="en">Popup says <b>Server Unreachable</b></td><td data-l="ms">Pastikan aplikasi LiveHostea sedang dibuka. Jika aplikasi memberitahu ia menggunakan port lain (contohnya 3001), tukar <b>Server WebSocket URL</b> dalam tetapan extension kepada <code>ws://localhost:3001</code>.</td><td data-l="en">Make sure the LiveHostea app is open. If the app told you it's using another port (e.g. 3001), change <b>Server WebSocket URL</b> in the extension settings to <code>ws://localhost:3001</code>.</td></tr>
+          <tr><td data-l="ms">Popup kata <b>No Chat Found</b></td><td data-l="en">Popup says <b>No Chat Found</b></td><td data-l="ms">Pastikan anda di halaman yang <i>menunjukkan chat</i>. Jika masih tidak dikesan, guna custom selectors (langkah 9).</td><td data-l="en">Make sure you're on the page that <i>shows the chat</i>. If it's still not detected, use custom selectors (step 9).</td></tr>
+          <tr><td data-l="ms">Tiada suara</td><td data-l="en">No voice</td><td data-l="ms">Klik butang <b>Earbud voice</b> (perlu diklik semula selepas refresh). Semak earbud dipilih sebagai output bunyi. Cuba <b>Test voice</b> dalam tetapan.</td><td data-l="en">Click the <b>Earbud voice</b> button (needed again after a refresh). Check the earbud is the sound output. Try <b>Test voice</b> in the settings.</td></tr>
+          <tr><td data-l="ms">Overlay kosong di OBS</td><td data-l="en">Overlay blank in OBS</td><td data-l="ms">Normal sehingga ada permintaan produk. Klik <b>Show test card in OBS</b> dalam tab Overlay untuk menguji. Dalam OBS, klik kanan source → <b>Refresh</b>.</td><td data-l="en">That's normal until there's a product request. Click <b>Show test card in OBS</b> in the Overlay tab to test. In OBS, right-click the source → <b>Refresh</b>.</td></tr>
+          <tr><td data-l="ms">Port 3000 sedang digunakan</td><td data-l="en">Port 3000 is already in use</td><td data-l="ms">Aplikasi akan pilih port lain secara automatik (3001, 3002…) dan beritahu anda URL baharu untuk extension dan OBS. Atau tutup program lain yang menggunakan port 3000 dan buka semula LiveHostea.</td><td data-l="en">The app automatically picks another port (3001, 3002…) and tells you the new URL for the extension and OBS. Or close the other program using port 3000 and reopen LiveHostea.</td></tr>
+        </tbody>
+      </table></div>
+      <p data-l="ms" style="font-size:14px">Arahan Terminal untuk Mac (hanya jika "damaged"):</p>
+      <p data-l="en" style="font-size:14px">Terminal command for Mac (only if it says "damaged"):</p>
+      <pre class="cmd"><code>xattr -cr /Applications/LiveHostea.app</code></pre>
+    </section>
+
+    <!-- 15 -->
+    <section id="advanced">
+      <h2><span class="num">15</span><span data-l="ms">Lanjutan</span><span data-l="en">Advanced</span></h2>
+      <h3 data-l="ms">Webhook (WhatsApp, n8n, Make, Zapier)</h3><h3 data-l="en">Webhooks (WhatsApp, n8n, Make, Zapier)</h3>
+      <p data-l="ms">LiveHostea boleh hantar setiap lock, pesanan dan perubahan stok ke alamat web pilihan anda, contohnya untuk hantar mesej WhatsApp automatik kepada pembeli.</p>
+      <p data-l="en">LiveHostea can send every lock, order and stock change to web addresses you choose, for example to send buyers an automatic WhatsApp message.</p>
+      <ol class="steps-list">
+        <li data-l="ms">Dalam n8n, Make, Zapier atau bot anda, cipta <b>webhook</b> baharu dan salin alamatnya (bermula dengan <code>https://</code>).</li>
+        <li data-l="en">In n8n, Make, Zapier or your bot, create a new <b>webhook</b> and copy its address (it starts with <code>https://</code>).</li>
+        <li data-l="ms">Di dashboard LiveHostea, buka tab <b>Settings</b> dan tampal alamat itu dalam <b>Webhook addresses</b> (satu alamat setiap baris).</li>
+        <li data-l="en">In the LiveHostea dashboard, open the <b>Settings</b> tab and paste the address into <b>Webhook addresses</b> (one per line).</li>
+        <li data-l="ms">Pilihan: isi <b>Signing secret</b> dengan teks rawak yang panjang, dan masukkan teks yang sama di aplikasi penerima supaya ia boleh sahkan mesej datang daripada anda.</li>
+        <li data-l="en">Optional: fill in <b>Signing secret</b> with long random text, and enter the same text in the receiving app so it can check messages really come from you.</li>
+        <li data-l="ms">Klik <b>Save</b>, kemudian <b>Send test</b>. Tanda ✓ hijau bermaksud penerima dapat mesej ujian.</li>
+        <li data-l="en">Click <b>Save</b>, then <b>Send test</b>. A green ✓ means the receiver got the test message.</li>
+      </ol>
+      <p data-l="ms">Bahagian <b>What gets sent?</b> dalam tab Settings menunjukkan contoh data dan senarai event. Tetapan disimpan dalam komputer anda dan hanya boleh diubah dari komputer itu.</p>
+      <p data-l="en">The <b>What gets sent?</b> section in the Settings tab shows an example and the list of events. Settings are saved on your computer and can only be changed from that computer.</p>
+      <p data-l="ms" style="font-size:14px;color:var(--ink-3)">Untuk pemasangan pelayan dari kod sumber, pemboleh ubah persekitaran <code>LIVEHOSTEA_WEBHOOK_URLS</code> dan <code>LIVEHOSTEA_WEBHOOK_SECRET</code> masih berfungsi dan mengatasi tab Settings. Ada soalan? Tanya di <a href="https://github.com/LiveHostea/download/issues">GitHub</a>.</p>
+      <p data-l="en" style="font-size:14px;color:var(--ink-3)">For server setups running from source, the <code>LIVEHOSTEA_WEBHOOK_URLS</code> and <code>LIVEHOSTEA_WEBHOOK_SECRET</code> environment variables still work and take precedence over the Settings tab. Questions? Ask on <a href="https://github.com/LiveHostea/download/issues">GitHub</a>.</p>
+      <h3 data-l="ms">Guna di rangkaian peribadi</h3><h3 data-l="en">Running on a private network</h3>
+      <p data-l="ms">LiveHostea tiada kata laluan, jadi jangan dedahkan ia ke internet. Untuk hadkan kepada komputer anda sahaja, mulakan dengan <code>HOST=127.0.0.1</code>.</p>
+      <p data-l="en">LiveHostea has no password, so don't expose it to the internet. To limit it to your own computer, start it with <code>HOST=127.0.0.1</code>.</p>
+
+      <div class="callout info" style="margin-top:32px"><span class="ci">🙋</span>
+        <p data-l="ms">Masih tersekat? Buka isu di <a href="https://github.com/LiveHostea/download/issues">GitHub</a> dengan gambar skrin dan apa yang anda cuba buat.</p>
+        <p data-l="en">Still stuck? Open an issue on <a href="https://github.com/LiveHostea/download/issues">GitHub</a> with a screenshot and what you were trying to do.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M9 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg></span>
+        LiveHostea
+      </a>
+      <div class="footer-links">
+        <a href="index.html"><span data-l="ms">Laman utama</span><span data-l="en">Home</span></a>
+        <a href="https://github.com/LiveHostea/download">GitHub</a>
+        <a href="license.txt"><span data-l="ms">Lesen</span><span data-l="en">License</span></a>
+        <a href="privacy.html"><span data-l="ms">Privasi</span><span data-l="en">Privacy</span></a>
+      </div>
+    </div>
+    <p class="fine">© 2026 Haizad Annuar. LiveHostea Community Edition · FSL-1.1-ALv2.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

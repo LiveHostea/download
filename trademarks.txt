@@ -1,0 +1,21 @@
+# LiveHostea Trademark Policy
+
+"LiveHostea", the LiveHostea logo, and the mug icon are trademarks of
+Haizad Annuar, the owner of LiveHostea. The [license](LICENSE) for the code does **not** give you rights to
+use them (see its "Trademarks" clause).
+
+## You may
+- Say that your project is "based on LiveHostea" or "compatible with LiveHostea",
+  as long as it is clear that it is not an official LiveHostea product.
+- Use the name when writing about, reviewing, or teaching LiveHostea.
+- Run an unmodified copy for your own live selling and call it LiveHostea.
+
+## You may not
+- Use "LiveHostea" or a confusingly similar name (e.g. "LiveHostea Pro",
+  "LiveHost-ea", "LiveHosteaX") for a fork, product, company, domain, or app.
+- Use the logo or icon on a modified version or in your own branding.
+- Suggest that LiveHostea endorses, sponsors, or is affiliated with you.
+
+If you fork LiveHostea, please give your fork a different name and logo.
+
+For permission requests, contact the LiveHostea team via https://LiveHostea.com.
